@@ -1,0 +1,546 @@
+2023-02-04 09:18:14 DEBUG --- [restartedMain] org.apache.ibatis.logging.LogFactory Line:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-04 09:35:08 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.UserMapper.findByUsername Line:143 - ==>  Preparing: SELECT uid, username, password, salt, avatar, is_delete AS isDelete FROM t_user WHERE username=? 
+2023-02-04 09:35:08 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.UserMapper.findByUsername Line:143 - ==> Parameters: admin(String)
+2023-02-04 09:35:08 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.UserMapper.findByUsername Line:143 - <==      Total: 1
+2023-02-04 09:35:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.GoodsMapper.findHotList Line:143 - ==>  Preparing: SELECT id, title, price, image FROM t_goods WHERE status=1 AND num>100 ORDER BY priority DESC LIMIT 0,4 
+2023-02-04 09:35:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.GoodsMapper.findHotList Line:143 - ==> Parameters: 
+2023-02-04 09:35:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.GoodsMapper.findHotList Line:143 - <==      Total: 4
+2023-02-04 09:35:11 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.UserMapper.findByUid Line:143 - ==>  Preparing: SELECT username, phone, email, gender, password, salt, is_delete AS isDelete FROM t_user WHERE uid=? 
+2023-02-04 09:35:11 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.UserMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:35:11 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.UserMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:35:12 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:35:12 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:35:12 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel FROM t_address WHERE aid = ? 
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140000(String)
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140400(String)
+2023-02-04 09:35:18 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:35:31 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:35:31 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 220000(String)
+2023-02-04 09:35:31 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 9
+2023-02-04 09:35:32 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:35:32 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 220100(String)
+2023-02-04 09:35:32 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 220000(String)
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 220100(String)
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 220101(String)
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==>  Preparing: update t_address SET name = ?, province_code = ?, province_name = ?, city_code = ?, city_name = ?, area_code = ?, area_name = ?, zip = ?, address = ?, phone = ?, tel = ?, tag = ?, modified_user = ?, modified_time = ? WHERE aid = ? 
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==> Parameters: 修改测试(String), 220000(String), 吉林省(String), 220100(String), 长春市(String), 220101(String), 市辖区(String), 11111(String), 柳树底村(String), 13160056856(String), 110(String), 公司(String), admin(String), 2023-02-04 09:35:52.314(Timestamp), null
+2023-02-04 09:35:52 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - <==    Updates: 0
+2023-02-04 09:35:56 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:35:56 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:35:56 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:36:02 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:36:02 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:36:02 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:36:03 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:36:03 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:36:03 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:36:04 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:36:04 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:36:04 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:36:04 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:36:04 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:36:04 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:36:05 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:36:05 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:36:05 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel FROM t_address WHERE aid = ? 
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140000(String)
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140400(String)
+2023-02-04 09:36:09 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:36:12 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:36:12 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:36:12 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:41:11 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:41:11 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:41:11 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel FROM t_address WHERE aid = ? 
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140000(String)
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140400(String)
+2023-02-04 09:41:13 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:41:17 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:41:17 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 130000(String)
+2023-02-04 09:41:17 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:41:19 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:41:19 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 130100(String)
+2023-02-04 09:41:19 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 24
+2023-02-04 09:42:26 DEBUG --- [restartedMain] org.apache.ibatis.logging.LogFactory Line:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-04 09:43:41 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.UserMapper.findByUsername Line:143 - ==>  Preparing: SELECT uid, username, password, salt, avatar, is_delete AS isDelete FROM t_user WHERE username=? 
+2023-02-04 09:43:41 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.UserMapper.findByUsername Line:143 - ==> Parameters: admin(String)
+2023-02-04 09:43:41 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.UserMapper.findByUsername Line:143 - <==      Total: 1
+2023-02-04 09:43:42 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.GoodsMapper.findHotList Line:143 - ==>  Preparing: SELECT id, title, price, image FROM t_goods WHERE status=1 AND num>100 ORDER BY priority DESC LIMIT 0,4 
+2023-02-04 09:43:42 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.GoodsMapper.findHotList Line:143 - ==> Parameters: 
+2023-02-04 09:43:42 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.GoodsMapper.findHotList Line:143 - <==      Total: 4
+2023-02-04 09:43:44 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.UserMapper.findByUid Line:143 - ==>  Preparing: SELECT username, phone, email, gender, password, salt, is_delete AS isDelete FROM t_user WHERE uid=? 
+2023-02-04 09:43:44 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.UserMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:43:44 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.UserMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:43:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:43:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:43:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel FROM t_address WHERE aid = ? 
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140000(String)
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140400(String)
+2023-02-04 09:43:47 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:43:51 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:43:51 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:43:51 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:43:52 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:43:52 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330100(String)
+2023-02-04 09:43:52 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:44:10 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:44:10 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:44:10 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:44:11 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:44:11 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330100(String)
+2023-02-04 09:44:11 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:44:11 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:44:11 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330103(String)
+2023-02-04 09:44:11 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:44:55 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==>  Preparing: update t_address SET name = ?, province_code = ?, province_name = ?, city_code = ?, city_name = ?, area_code = ?, area_name = ?, zip = ?, address = ?, phone = ?, tel = ?, tag = ?, modified_user = ?, modified_time = ? WHERE aid = ? 
+2023-02-04 09:44:55 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==> Parameters: 测试(String), 330000(String), 浙江省(String), 330100(String), 杭州市(String), 330103(String), 下城区(String), 1111(String), 测试(String), 13160056856(String), 111(String), 测试(String), admin(String), 2023-02-04 09:44:28.939(Timestamp), 27(Integer)
+2023-02-04 09:44:55 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - <==    Updates: 1
+2023-02-04 09:45:13 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:45:13 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:45:13 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel FROM t_address WHERE aid = ? 
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330100(String)
+2023-02-04 09:45:23 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:45:27 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:45:27 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:45:27 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel FROM t_address WHERE aid = ? 
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 25(Integer)
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140000(String)
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 140400(String)
+2023-02-04 09:45:29 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:45:33 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:45:33 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:45:33 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:45:36 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:45:36 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330600(String)
+2023-02-04 09:45:36 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 7
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330600(String)
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330681(String)
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==>  Preparing: update t_address SET name = ?, province_code = ?, province_name = ?, city_code = ?, city_name = ?, area_code = ?, area_name = ?, zip = ?, address = ?, phone = ?, tel = ?, tag = ?, modified_user = ?, modified_time = ? WHERE aid = ? 
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==> Parameters: 测试1(String), 330000(String), 浙江省(String), 330600(String), 绍兴市(String), 330681(String), 诸暨市(String), (String), 测试1(String), 111111111(String), 11(String), 测试1(String), admin(String), 2023-02-04 09:45:49.832(Timestamp), 25(Integer)
+2023-02-04 09:45:49 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - <==    Updates: 1
+2023-02-04 09:45:53 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:45:53 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:45:53 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel FROM t_address WHERE aid = ? 
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330100(String)
+2023-02-04 09:46:04 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:46:07 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:07 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 120000(String)
+2023-02-04 09:46:07 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 2
+2023-02-04 09:46:09 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:09 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370000(String)
+2023-02-04 09:46:09 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 17
+2023-02-04 09:46:10 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:10 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370100(String)
+2023-02-04 09:46:10 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 370000(String)
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 370100(String)
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 370103(String)
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==>  Preparing: update t_address SET name = ?, province_code = ?, province_name = ?, city_code = ?, city_name = ?, area_code = ?, area_name = ?, zip = ?, address = ?, phone = ?, tel = ?, tag = ?, modified_user = ?, modified_time = ? WHERE aid = ? 
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==> Parameters: 测试2(String), 370000(String), 山东省(String), 370100(String), 济南市(String), 370103(String), 市中区(String), 222(String), 测试2(String), 2222(String), 222(String), 测试2(String), admin(String), 2023-02-04 09:46:20.659(Timestamp), 27(Integer)
+2023-02-04 09:46:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - <==    Updates: 1
+2023-02-04 09:46:22 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:46:22 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:46:22 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel FROM t_address WHERE aid = ? 
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370000(String)
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 17
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370100(String)
+2023-02-04 09:46:29 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:48:35 DEBUG --- [restartedMain] org.apache.ibatis.logging.LogFactory Line:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370000(String)
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 17
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370100(String)
+2023-02-04 09:48:42 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370000(String)
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 17
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370100(String)
+2023-02-04 09:48:44 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370000(String)
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 17
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370100(String)
+2023-02-04 09:48:45 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:48:48 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:48:48 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:48:48 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 25(Integer)
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330600(String)
+2023-02-04 09:48:52 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 7
+2023-02-04 09:48:56 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:48:56 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:48:56 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 25(Integer)
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 330600(String)
+2023-02-04 09:48:58 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 7
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330000(String)
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330600(String)
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 330681(String)
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==>  Preparing: update t_address SET name = ?, province_code = ?, province_name = ?, city_code = ?, city_name = ?, area_code = ?, area_name = ?, zip = ?, address = ?, phone = ?, tel = ?, tag = ?, modified_user = ?, modified_time = ? WHERE aid = ? 
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==> Parameters: 测试1(String), 330000(String), 浙江省(String), 330600(String), 绍兴市(String), 330681(String), 诸暨市(String), 11111(String), 测试1(String), 111111111(String), 11(String), 测试1(String), admin(String), 2023-02-04 09:49:00.387(Timestamp), 25(Integer)
+2023-02-04 09:49:00 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - <==    Updates: 1
+2023-02-04 09:49:02 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:49:02 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:49:02 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370000(String)
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 17
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 370100(String)
+2023-02-04 09:49:08 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 11
+2023-02-04 09:49:11 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:49:11 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:49:11 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 3
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 25(Integer)
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - ==>  Preparing: DELETE FROM t_address WHERE aid = ? 
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - ==> Parameters: 25(Integer)
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - <==    Updates: 1
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:49:12 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 2
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - ==>  Preparing: DELETE FROM t_address WHERE aid = ? 
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - ==> Parameters: 27(Integer)
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - <==    Updates: 1
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:49:13 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 26(Integer)
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 120000(String)
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 2
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 120200(String)
+2023-02-04 09:49:14 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 3
+2023-02-04 09:49:19 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:49:19 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:49:19 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 26(Integer)
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 120000(String)
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 2
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 120200(String)
+2023-02-04 09:49:20 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 3
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 120000(String)
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 120200(String)
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 120221(String)
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==>  Preparing: update t_address SET name = ?, province_code = ?, province_name = ?, city_code = ?, city_name = ?, area_code = ?, area_name = ?, zip = ?, address = ?, phone = ?, tel = ?, tag = ?, modified_user = ?, modified_time = ? WHERE aid = ? 
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==> Parameters: lihao li(String), 120000(String), 天津市(String), 120200(String), 县(String), 120221(String), 宁河县(String), 222101(String), 江苏(String), 13160056856(String), 1111(String), 江苏(String), admin(String), 2023-02-04 09:49:24.224(Timestamp), 26(Integer)
+2023-02-04 09:49:24 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - <==    Updates: 1
+2023-02-04 09:49:27 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:49:27 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:49:27 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 26(Integer)
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 120000(String)
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 2
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 120200(String)
+2023-02-04 09:49:28 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 3
+2023-02-04 09:49:37 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:37 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 320000(String)
+2023-02-04 09:49:37 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 13
+2023-02-04 09:49:39 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:39 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 320700(String)
+2023-02-04 09:49:39 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 8
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 320000(String)
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 320700(String)
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 320721(String)
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==>  Preparing: update t_address SET name = ?, province_code = ?, province_name = ?, city_code = ?, city_name = ?, area_code = ?, area_name = ?, zip = ?, address = ?, phone = ?, tel = ?, tag = ?, modified_user = ?, modified_time = ? WHERE aid = ? 
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==> Parameters: lihao li(String), 320000(String), 江苏省(String), 320700(String), 连云港市(String), 320721(String), 赣榆县(String), 1111(String), 江苏(String), 13160056856(String), 1111(String), 111(String), admin(String), 2023-02-04 09:49:43.551(Timestamp), 26(Integer)
+2023-02-04 09:49:43 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - <==    Updates: 1
+2023-02-04 09:49:45 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:49:45 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:49:45 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 26(Integer)
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 320000(String)
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 13
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 320700(String)
+2023-02-04 09:49:48 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 8
+2023-02-04 09:50:04 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:04 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:04 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 26(Integer)
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 320000(String)
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 13
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 320700(String)
+2023-02-04 09:50:07 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 8
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 110000(String)
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 320100(String)
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 320701(String)
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 1
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==>  Preparing: update t_address SET name = ?, province_code = ?, province_name = ?, city_code = ?, city_name = ?, area_code = ?, area_name = ?, zip = ?, address = ?, phone = ?, tel = ?, tag = ?, modified_user = ?, modified_time = ? WHERE aid = ? 
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - ==> Parameters: (String), 110000(String), 北京市(String), 320100(String), 南京市(String), 320701(String), 市辖区(String), (String), (String), (String), (String), (String), admin(String), 2023-02-04 09:50:09.494(Timestamp), 26(Integer)
+2023-02-04 09:50:09 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.updAdd Line:143 - <==    Updates: 1
+2023-02-04 09:50:11 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:11 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:11 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 26(Integer)
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 110000(String)
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 2
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 320100(String)
+2023-02-04 09:50:15 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 14
+2023-02-04 09:50:19 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:19 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:19 DEBUG --- [http-nio-8080-exec-7] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 26(Integer)
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - ==>  Preparing: DELETE FROM t_address WHERE aid = ? 
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - ==> Parameters: 26(Integer)
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - <==    Updates: 1
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - ==>  Preparing: SELECT COUNT(*) FROM t_address WHERE uid = ? 
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - <==      Total: 1
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:20 DEBUG --- [http-nio-8080-exec-9] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 0
+2023-02-04 09:50:22 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:22 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:22 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 0
+2023-02-04 09:50:23 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:23 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:23 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 0
+2023-02-04 09:50:24 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:24 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:24 DEBUG --- [http-nio-8080-exec-5] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 0
+2023-02-04 09:50:25 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:50:25 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:50:25 DEBUG --- [http-nio-8080-exec-6] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:50:48 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:48 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:48 DEBUG --- [http-nio-8080-exec-8] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 0
+2023-02-04 09:50:49 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==>  Preparing: SELECT id, parent, code, name FROM t_dict_district WHERE parent=? ORDER BY id 
+2023-02-04 09:50:49 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - ==> Parameters: 86(String)
+2023-02-04 09:50:49 DEBUG --- [http-nio-8080-exec-10] cn.tedu.store.mapper.DistrictMapper.findByParent Line:143 - <==      Total: 34
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - ==>  Preparing: SELECT COUNT(*) FROM t_address WHERE uid = ? 
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - <==      Total: 1
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 0(String)
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 0
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 0(String)
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 0
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==>  Preparing: SELECT name FROM t_dict_district WHERE code=? 
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - ==> Parameters: 0(String)
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.DistrictMapper.findByCode Line:143 - <==      Total: 0
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.insert Line:143 - ==>  Preparing: INSERT INTO t_address (uid, name, province_code, province_name, city_code, city_name, area_code, area_name, zip, address, phone, tel, tag, is_default, created_user, created_time, modified_user, modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.insert Line:143 - ==> Parameters: 3(Integer), (String), null, null, null, null, null, null, (String), (String), (String), (String), (String), 1(Integer), admin(String), 2023-02-04 09:50:51.021(Timestamp), admin(String), 2023-02-04 09:50:51.021(Timestamp)
+2023-02-04 09:50:51 DEBUG --- [http-nio-8080-exec-1] cn.tedu.store.mapper.AddressMapper.insert Line:143 - <==    Updates: 1
+2023-02-04 09:50:52 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:52 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:52 DEBUG --- [http-nio-8080-exec-2] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 1
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==>  Preparing: SELECT uid, is_default AS isDefault, name, phone, province_code AS provinceCode, province_name AS provinceName, city_code AS cityCode, city_name AS cityName, area_code AS areaCode, area_name AS areaName, address, zip, tel, tag FROM t_address WHERE aid = ? 
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - ==> Parameters: 28(Integer)
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.findByAid Line:143 - <==      Total: 1
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - ==>  Preparing: DELETE FROM t_address WHERE aid = ? 
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - ==> Parameters: 28(Integer)
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.deleteByAid Line:143 - <==    Updates: 1
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - ==>  Preparing: SELECT COUNT(*) FROM t_address WHERE uid = ? 
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-3] cn.tedu.store.mapper.AddressMapper.countByUid Line:143 - <==      Total: 1
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==>  Preparing: SELECT aid, name, province_name AS provinceName, city_name AS cityName, area_name AS areaName, address, phone, is_default AS isDefault, tag FROM t_address WHERE uid = ? ORDER BY is_default DESC, modified_time DESC 
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - ==> Parameters: 3(Integer)
+2023-02-04 09:50:54 DEBUG --- [http-nio-8080-exec-4] cn.tedu.store.mapper.AddressMapper.findByUid Line:143 - <==      Total: 0
