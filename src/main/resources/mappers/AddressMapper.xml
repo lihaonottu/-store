@@ -94,6 +94,7 @@
     <!-- List<Address> findByUid(Integer uid) -->
     <select id="findByUid"
             resultType="cn.tedu.store.entity.Address">
+
         SELECT aid,
                name,
                province_name AS provinceName,
